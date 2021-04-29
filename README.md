@@ -52,5 +52,23 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
 
 Implement one failing test and at least one passing test:
 
-- _enter the name of a **passing** test
-- _enter the name of a **failing** test
+**Failing Test** : Number of groups found out of the input numbers fails since 
+void currentReport::generateGroup()
+{
+	CurrentGroups subSet;
+	subSet.init_CurrentGroups(dataSamples[0]);
+	for (int iter = 1; iter < dataSamples.size(); iter++) {
+		if (dataSamples[iter] - dataSamples[iter - 1] < 2) {
+			subSet.max = dataSamples[iter];
+			subSet.unitsInGroup++;
+		}
+		else
+		{
+			CurrentGroupData.push_back(subSet);
+			subSet.init_CurrentGroups(dataSamples[iter]);
+		}
+	}
+	**CurrentGroupData.push_back(subSet);** was not included which will omit the last group.
+}
+**Passing Test** : Number of groups found out of the input numbers.
+
