@@ -5,13 +5,12 @@
 
 
 typedef class CurrentGroups{
-
 public: 
 	int min;
 	int max;
 	int unitsInGroup;
 	void init_CurrentGroups(int value);
-};
+}CurrentGroups;
 
 
 class currentReport {
