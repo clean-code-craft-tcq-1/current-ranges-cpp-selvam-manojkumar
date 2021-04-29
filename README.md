@@ -53,6 +53,7 @@ Adapt/adopt/extend the `yml` files from one of your workflow folders.
 Implement one failing test and at least one passing test:
 
 **Failing Test** : Number of groups found out of the input numbers fails since 
+```
 void currentReport::generateGroup()
 {
 	CurrentGroups subSet;
@@ -70,5 +71,7 @@ void currentReport::generateGroup()
 	}
 	**CurrentGroupData.push_back(subSet);** was not included which will omit the last group.
 }
+
+```
 **Passing Test** : Number of groups found out of the input numbers.
 
